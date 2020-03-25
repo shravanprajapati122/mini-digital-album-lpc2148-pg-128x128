@@ -34,8 +34,8 @@ unsigned int SPI_init(void)
   PINSEL0 |= 1<<10;    //SPI MISO function selected on pin 5
   PINSEL0 |= 1<<12;    //SPI MOSI function selected on pin 6
   
-  IO0DIR |= 1<<11;      //make SSEL output
-  IO0SET |= 1<<11;      //and drive it high (disable slave)
+  IO0DIR |= 1<<7;      //make SSEL output
+  IO0SET |= 1<<7;      //and drive it high (disable slave)
   
   S0SPCR = 0x20;           //Master mode, clock active-high, data 8-bit MSB first, no interrupt
   
